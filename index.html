@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PUREVIVE Holding — Structured Growth. Long-Term Value.</title>
+<meta name="description" content="PUREVIVE is a multi-sector holding company headquartered in Indonesia. We partner with established businesses across energy, technology, architecture, tourism, media, commerce, and trade to strengthen structure and build long-term value.">
+<link rel="canonical" href="https://pureviveglobalhub.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PUREVIVE Holding — Structured Growth. Long-Term Value.">
+<meta property="og:description" content="A multi-sector holding company partnering with established businesses to strengthen structure, accelerate expansion, and build lasting enterprise value.">
+<meta property="og:url" content="https://pureviveglobalhub.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PUREVIVE Holding — Structured Growth. Long-Term Value.">
+<meta name="twitter:description" content="A multi-sector holding company partnering with established businesses to strengthen structure, accelerate expansion, and build lasting enterprise value.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2300294a'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-weight='bold' font-size='58' fill='%231ac9d3' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #003e6b;
+    --navy-deep: #00294a;
+    --navy-light: #004d85;
+    --cyan: #1ac9d3;
+    --cyan-dim: rgba(26,201,211,0.15);
+    --cyan-glow: rgba(26,201,211,0.4);
+    --white: #ffffff;
+    --off: #e8f0f5;
+    --muted: rgba(255,255,255,0.45);
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy-deep);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* CUSTOM CURSOR */
+  .cursor {
+    position: fixed;
+    width: 10px; height: 10px;
+    background: var(--cyan);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%,-50%);
+    transition: transform 0.1s, width 0.3s, height 0.3s, background 0.3s;
+    mix-blend-mode: screen;
+  }
+  .cursor-ring {
+    position: fixed;
+    width: 36px; height: 36px;
+    border: 1px solid var(--cyan);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%,-50%);
+    transition: transform 0.18s ease, width 0.3s, height 0.3s, opacity 0.3s;
+    opacity: 0.6;
+  }
+
+  /* NOISE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9997;
+    opacity: 0.5;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 60px;
+    background: linear-gradient(to bottom, rgba(0,41,74,0.95) 0%, transparent 100%);
+    backdrop-filter: blur(2px);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  /* SVG Logo Mark */
+  .logomark svg { height: 28px; width: auto; }
+
+  .nav-links {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--cyan); }
+
+  .nav-cta {
+    padding: 10px 24px;
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+    cursor: none;
+  }
+  .nav-cta:hover { background: var(--cyan); color: var(--navy-deep); }
+
+  .nav-toggle { display: none; }
+  .nav-cta-mobile { display: none; }
+
+  /* HERO */
+  #hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #canvas-3d {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 900px;
+    padding: 0 40px;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 1s 0.3s forwards;
+  }
+  .hero-tag::before, .hero-tag::after {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--cyan);
+  }
+
+  .hero-h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 9vw, 120px);
+    line-height: 0.95;
+    letter-spacing: 2px;
+    color: var(--white);
+    opacity: 0;
+    animation: fadeUp 1s 0.5s forwards;
+  }
+  .hero-h1 .accent { color: var(--cyan); }
+
+  .hero-sub {
+    margin-top: 28px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    animation: fadeUp 1s 0.7s forwards;
+  }
+
+  .hero-cta {
+    margin-top: 48px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 40px;
+    background: var(--cyan);
+    color: var(--navy-deep);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    cursor: none;
+    opacity: 0;
+    animation: fadeUp 1s 0.9s forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+  .hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 60px rgba(26,201,211,0.4);
+  }
+  .hero-cta svg { width: 18px; height: 18px; }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeUp 1s 1.2s forwards;
+  }
+  .scroll-line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--cyan), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  /* GRID BACKGROUND */
+  .grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(26,201,211,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26,201,211,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+  }
+
+  /* SECTIONS COMMON */
+  section { padding: 120px 60px; }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--cyan);
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+  .section-title .accent { color: var(--cyan); }
+
+  /* WHO WE ARE */
+  #who {
+    background: var(--navy-deep);
+    position: relative;
+    overflow: hidden;
+  }
+  #who::before {
+    content: '';
+    position: absolute;
+    right: -200px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(26,201,211,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .who-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .who-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin-top: 32px;
+  }
+  .who-text p + p { margin-top: 20px; }
+  .who-text strong { color: var(--white); font-weight: 500; }
+
+  .who-pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .pillar {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(26,201,211,0.1);
+    padding: 32px 28px;
+    transition: background 0.3s, border-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .pillar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--cyan);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+  }
+  .pillar:hover { background: rgba(26,201,211,0.05); border-color: rgba(26,201,211,0.3); transform: translateY(-4px); }
+  .pillar:hover::before { transform: scaleX(1); }
+
+  .pillar-icon { font-size: 24px; margin-bottom: 16px; }
+  .pillar-title { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 2px; color: var(--cyan); margin-bottom: 8px; }
+  .pillar-text { font-size: 13px; line-height: 1.6; color: var(--muted); }
+
+  /* WHAT WE DO */
+  #what {
+    background: linear-gradient(135deg, #00294a 0%, #003e6b 100%);
+    position: relative;
+  }
+
+  .what-inner { max-width: 1300px; margin: 0 auto; }
+
+  .what-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  .what-problem h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+  .what-problem p { font-size: 15px; line-height: 1.8; color: var(--muted); margin-bottom: 16px; }
+
+  .pressure-list {
+    list-style: none;
+    margin-top: 20px;
+  }
+  .pressure-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    font-size: 14px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .pressure-list li::before {
+    content: '→';
+    color: var(--cyan);
+    font-size: 14px;
+  }
+
+  .what-solution h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: var(--cyan);
+    margin-bottom: 24px;
+  }
+
+  .solution-cards {
+    display: grid;
+    gap: 16px;
+  }
+
+  .solution-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    padding: 24px;
+    background: rgba(0,0,0,0.2);
+    border-left: 2px solid var(--cyan);
+    transition: background 0.3s;
+  }
+  .solution-card:hover { background: rgba(26,201,211,0.06); }
+
+  .solution-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: rgba(26,201,211,0.3);
+    line-height: 1;
+  }
+  .solution-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .solution-text { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* PHILOSOPHY */
+  #philosophy {
+    background: var(--navy-deep);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .philosophy-inner { max-width: 900px; margin: 0 auto; position: relative; }
+
+  .big-quote {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(32px, 4vw, 56px);
+    line-height: 1.2;
+    letter-spacing: 1px;
+    margin-top: 60px;
+    color: var(--white);
+  }
+  .big-quote .accent { color: var(--cyan); }
+
+  .phi-divider {
+    width: 80px;
+    height: 1px;
+    background: var(--cyan);
+    margin: 40px auto;
+  }
+
+  .phi-criteria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .crit-item {
+    padding: 40px 24px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(26,201,211,0.08);
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .crit-item:hover { background: rgba(26,201,211,0.04); border-color: rgba(26,201,211,0.2); }
+
+  .crit-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: var(--cyan);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .crit-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .crit-text { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  /* SECTORS */
+  #sectors {
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sectors-inner { max-width: 1300px; margin: 0 auto; }
+  .sectors-header { display: flex; justify-content: space-between; align-items: flex-end; }
+
+  .sector-tagline {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 300px;
+    line-height: 1.6;
+    text-align: right;
+  }
+
+  .sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .sector-item {
+    position: relative;
+    padding: 40px 36px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(26,201,211,0.08);
+    overflow: hidden;
+    cursor: none;
+    transition: transform 0.4s, background 0.4s;
+  }
+  .sector-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--cyan);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+  }
+  .sector-item:hover { transform: translateY(-6px); background: rgba(26,201,211,0.05); }
+  .sector-item:hover::after { transform: scaleX(1); }
+
+  .sector-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .sector-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .sector-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  .sectors-note {
+    margin-top: 48px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .sectors-note strong { color: var(--cyan); font-style: normal; }
+
+  /* GOVERNANCE */
+  #governance {
+    background: var(--navy-deep);
+    position: relative;
+  }
+
+  .gov-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .gov-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+  }
+
+  .gov-ring {
+    position: absolute;
+    border: 1px solid rgba(26,201,211,0.2);
+    border-radius: 50%;
+    animation: rotateSlow 20s linear infinite;
+  }
+  .gov-ring:nth-child(1) { width: 320px; height: 320px; }
+  .gov-ring:nth-child(2) { width: 240px; height: 240px; animation-direction: reverse; animation-duration: 15s; border-style: dashed; }
+  .gov-ring:nth-child(3) { width: 160px; height: 160px; animation-duration: 10s; }
+
+  .gov-center {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+  }
+  .gov-center-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .gov-center-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: var(--cyan);
+  }
+
+  .gov-pillars { list-style: none; margin-top: 40px; }
+  .gov-pillars li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .gov-pillars li:last-child { border-bottom: none; }
+
+  .gov-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--cyan);
+    opacity: 0.4;
+    min-width: 40px;
+    line-height: 1;
+  }
+  .gov-item-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .gov-item-text { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* PARTNERSHIPS */
+  #partnerships {
+    background: linear-gradient(135deg, #003e6b, #00294a);
+    text-align: center;
+  }
+
+  .partner-inner { max-width: 900px; margin: 0 auto; }
+
+  .partner-types {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .ptype {
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(26,201,211,0.08);
+    transition: all 0.3s;
+  }
+  .ptype:hover { background: rgba(26,201,211,0.06); border-color: rgba(26,201,211,0.25); transform: translateY(-4px); }
+
+  .ptype-icon { font-size: 32px; margin-bottom: 20px; display: block; }
+  .ptype-label { font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 2px; color: var(--white); margin-bottom: 8px; }
+  .ptype-sub { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+  .partner-motto {
+    margin-top: 60px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: var(--white);
+  }
+  .partner-motto span { color: var(--cyan); }
+
+  /* CLOSING CTA */
+  #cta-section {
+    background: var(--navy-deep);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 160px 60px;
+  }
+
+  .cta-bg-text {
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(100px, 20vw, 280px);
+    color: rgba(26,201,211,0.03);
+    letter-spacing: -5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .cta-inner { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+
+  .cta-tagline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(42px, 6vw, 84px);
+    line-height: 1;
+    letter-spacing: 1px;
+    color: var(--white);
+  }
+  .cta-tagline .accent { color: var(--cyan); }
+
+  .cta-sub {
+    margin-top: 24px;
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .cta-buttons {
+    margin-top: 48px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    padding: 20px 48px;
+    background: var(--cyan);
+    color: var(--navy-deep);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    cursor: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .btn-primary:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(26,201,211,0.4); }
+
+  .btn-secondary {
+    padding: 20px 48px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--white);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    cursor: none;
+    transition: border-color 0.3s, color 0.3s;
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
+
+  /* FOOTER */
+  footer {
+    background: rgba(0,0,0,0.4);
+    border-top: 1px solid rgba(26,201,211,0.1);
+    padding: 48px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .footer-text { font-size: 12px; color: var(--muted); letter-spacing: 1px; }
+  .footer-tagline { font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 3px; color: var(--cyan); margin-top: 4px; }
+  .footer-copy { font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 1px; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 1; transform: scaleY(1); }
+    50% { opacity: 0.4; transform: scaleY(0.6); }
+  }
+  @keyframes rotateSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* REVEAL ON SCROLL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* COUNTER STAT BAR */
+  .stat-bar {
+    background: rgba(26,201,211,0.1);
+    border-top: 1px solid rgba(26,201,211,0.2);
+    border-bottom: 1px solid rgba(26,201,211,0.2);
+    padding: 32px 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: var(--cyan);
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+  .stat-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+
+  /* HORIZONTAL SCROLL TICKER */
+  .ticker-wrap {
+    overflow: hidden;
+    background: var(--cyan);
+    padding: 14px 0;
+  }
+  .ticker {
+    display: flex;
+    gap: 0;
+    animation: ticker 25s linear infinite;
+    white-space: nowrap;
+  }
+  .ticker-item {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--navy-deep);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .ticker-item::after { content: '◆'; font-size: 8px; }
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* TOUCH DEVICES: no custom cursor (nothing to follow a mouse) */
+  @media (hover: none), (pointer: coarse) {
+    body { cursor: auto; }
+    .cursor, .cursor-ring { display: none; }
+    a, button { cursor: pointer; }
+  }
+
+  /* TABLET */
+  @media (max-width: 1024px) {
+    section { padding: 90px 40px; }
+    .who-grid, .what-intro, .gov-grid { grid-template-columns: 1fr; gap: 48px; }
+    .phi-criteria, .sectors-grid, .partner-types { grid-template-columns: repeat(2, 1fr); }
+    .gov-visual { height: 280px; }
+  }
+
+  /* MOBILE NAV */
+  @media (max-width: 768px) {
+    nav { padding: 20px 24px; }
+    .nav-links {
+      position: fixed;
+      top: 0; right: 0;
+      height: 100vh;
+      width: min(78vw, 320px);
+      flex-direction: column;
+      gap: 0;
+      background: var(--navy-deep);
+      border-left: 1px solid rgba(26,201,211,0.15);
+      padding: 100px 32px 40px;
+      transform: translateX(100%);
+      transition: transform 0.35s ease;
+      z-index: 999;
+    }
+    .nav-links.open { transform: translateX(0); }
+    .nav-links li { width: 100%; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .nav-links a { font-size: 13px; }
+    .nav-cta-mobile { display: block; border-bottom: none; margin-top: 16px; }
+    .nav-cta-mobile .nav-cta { display: inline-block; text-align: center; width: 100%; }
+    .nav-cta-desktop { display: none; }
+
+    .nav-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 32px; height: 32px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+      position: relative;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 100%;
+      height: 1.5px;
+      background: var(--white);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .nav-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+    .nav-overlay.open { opacity: 1; pointer-events: auto; }
+  }
+
+  /* MOBILE LAYOUT */
+  @media (max-width: 640px) {
+    section { padding: 72px 24px; }
+    .hero-content { padding: 0 20px; }
+    .hero-h1 { font-size: clamp(42px, 13vw, 64px); }
+    .hero-sub { font-size: 14px; }
+    .hero-cta { padding: 16px 28px; font-size: 15px; }
+
+    .who-pillars { grid-template-columns: 1fr; }
+    .phi-criteria, .sectors-grid, .partner-types { grid-template-columns: 1fr; }
+    .stat-bar { grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 32px 24px; }
+    .sectors-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .sector-tagline { text-align: left; max-width: none; }
+    .section-title { font-size: clamp(32px, 9vw, 48px); }
+    .big-quote { font-size: clamp(26px, 7vw, 36px); }
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 40px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="logomark">
+      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.84 43.05" style="height:28px;width:auto;">
+        <defs><style>.cls-1,.cls-2{fill:#1ac9d3;}.cls-1,.cls-3{fill-rule:evenodd;}.cls-3,.cls-4{fill:#ffffff;}</style></defs>
+        <g id="Layer_1-2" data-name="Layer 1">
+          <path class="cls-4" d="M55.02,43.05c-1.66,0-3.13-.23-4.41-.68-1.28-.45-2.36-1.08-3.25-1.89-.88-.81-1.55-1.79-2.01-2.95-.46-1.15-.69-2.42-.69-3.8v-12.31h7.51v12.02c0,.98.25,1.73.75,2.24.5.51,1.2.77,2.1.77s1.6-.25,2.1-.77c.5-.51.75-1.26.75-2.24v-12.02h7.51v12.32c0,1.38-.23,2.65-.69,3.8-.46,1.15-1.13,2.13-2.01,2.95-.88.81-1.97,1.44-3.26,1.89-1.29.45-2.76.68-4.4.68h0Z"/>
+          <path class="cls-4" d="M68.84,21.42h11.71c1.34,0,2.55.2,3.63.58,1.08.39,2,.93,2.75,1.62s1.33,1.52,1.73,2.48c.4.96.6,2,.6,3.12s-.18,2.09-.55,2.85-.78,1.37-1.25,1.83c-.52.54-1.12.98-1.8,1.32h0s3.9,7.21,3.9,7.21h-7.51l-3-5.71h-2.7v5.71h-7.51v-21.02h0ZM79.65,31.03c.6,0,1.08-.17,1.43-.51.35-.34.53-.77.53-1.29s-.18-.95-.53-1.29-.83-.51-1.43-.51h-3.3v3.6h3.3Z"/>
+          <path class="cls-4" d="M92.27,21.42h17.27v6.01h-9.76v1.95h7.66v5.11h-7.66v1.95h9.76v6.01h-17.27v-21.03Z"/>
+          <path class="cls-4" d="M135.07,21.42h7.51v21.03h-7.51v-21.03Z"/>
+          <path class="cls-4" d="M168.56,21.42h17.27v6.01h-9.76v1.95h7.66v5.11h-7.66v1.95h9.76v6.01h-17.27v-21.03h0Z"/>
+          <polygon class="cls-3" points="111.15 21.72 118.66 21.72 128.58 42.75 116.56 42.75 111.15 21.72"/>
+          <polygon class="cls-1" points="133.83 21.72 126.47 21.72 122.3 42.75 128.58 42.75 133.83 21.72"/>
+          <polyline class="cls-3" points="144.47 21.72 151.98 21.72 161.89 42.75 149.88 42.75 144.47 21.72"/>
+          <polygon class="cls-1" points="167.15 21.72 159.79 21.72 155.61 42.75 161.89 42.75 167.15 21.72"/>
+          <path class="cls-1" d="M29.16,0v4.88H6.91c-1.15.27-1.75.93-2.03,1.68v22.6H0V9.58L9.59,0h19.57Z"/>
+          <path class="cls-1" d="M27.59,12.03v2.86h-13.07c-.68.16-1.03.55-1.19.98v13.28h-2.86v-11.5l5.64-5.63h11.5Z"/>
+          <path class="cls-4" d="M41.62,26.3c-.42-.99-1.02-1.85-1.8-2.57s-1.73-1.29-2.84-1.7c-.29-.11-.59-.2-.89-.28v2.53h-13.07c-.67.16-1.01.54-1.18.97v17.2h7.51v-4.81h3.9c1.38,0,2.63-.21,3.74-.62,1.11-.41,2.06-.98,2.84-1.7.78-.72,1.38-1.58,1.8-2.57.42-.99.63-2.07.63-3.23s-.21-2.24-.63-3.23ZM33.98,31.03c-.41.4-.96.6-1.64.6h-3v-4.21h3c.68,0,1.23.2,1.64.6.41.4.62.9.62,1.5s-.21,1.1-.62,1.5Z"/>
+          <path class="cls-2" d="M18.96,27.05v11.5h2.86v-13.28s0-.01,0-.02v-1.07l-2.87,2.87Z"/>
+          <path class="cls-2" d="M23.01,24.28h13.07v-2.53c-.87-.23-1.82-.34-2.84-.34h-8.65l-2.76,2.76v1.07c.17-.43.52-.81,1.18-.97Z"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#who">About</a></li>
+    <li><a href="#what">Services</a></li>
+    <li><a href="#sectors">Sectors</a></li>
+    <li><a href="#partnerships">Partners</a></li>
+    <li class="nav-cta-mobile"><a href="#cta-section" class="nav-cta">Connect</a></li>
+  </ul>
+  <a href="#cta-section" class="nav-cta nav-cta-desktop">Connect</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="grid-bg"></div>
+  <canvas id="canvas-3d"></canvas>
+  <div class="hero-content">
+    <div class="hero-tag">🏛 Purevive Holding · Indonesia</div>
+    <h1 class="hero-h1">Structured<br><span class="accent">Growth.</span><br>Long-Term Value.</h1>
+    <p class="hero-sub">PUREVIVE partners with established businesses to strengthen structure, accelerate expansion, and build lasting enterprise value.</p>
+    <a href="#who" class="hero-cta">
+      Explore Our Approach
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span class="ticker-item">Energy Solutions</span>
+    <span class="ticker-item">Information Technology</span>
+    <span class="ticker-item">Architecture & Design</span>
+    <span class="ticker-item">Travel & Tourism</span>
+    <span class="ticker-item">Film & Media</span>
+    <span class="ticker-item">Digital Commerce</span>
+    <span class="ticker-item">Import & Export</span>
+    <span class="ticker-item">Exhibitions & Conferences</span>
+    <span class="ticker-item">Energy Solutions</span>
+    <span class="ticker-item">Information Technology</span>
+    <span class="ticker-item">Architecture & Design</span>
+    <span class="ticker-item">Travel & Tourism</span>
+    <span class="ticker-item">Film & Media</span>
+    <span class="ticker-item">Digital Commerce</span>
+    <span class="ticker-item">Import & Export</span>
+    <span class="ticker-item">Exhibitions & Conferences</span>
+  </div>
+</div>
+
+<!-- STAT BAR -->
+<div class="stat-bar">
+  <div class="reveal">
+    <div class="stat-num" data-count="9">0</div>
+    <div class="stat-label">Strategic Sectors</div>
+  </div>
+  <div class="reveal reveal-delay-1">
+    <div class="stat-num">∞</div>
+    <div class="stat-label">Long-Term Horizon</div>
+  </div>
+  <div class="reveal reveal-delay-2">
+    <div class="stat-num" data-count="1">0</div>
+    <div class="stat-label">Global HQ · Indonesia</div>
+  </div>
+  <div class="reveal reveal-delay-3">
+    <div class="stat-num" data-count="100">0</div>
+    <div class="stat-label">% Capital Discipline</div>
+  </div>
+</div>
+
+<!-- WHO WE ARE -->
+<section id="who">
+  <div class="who-grid">
+    <div class="who-text reveal">
+      <div class="section-label">Who We Are</div>
+      <h2 class="section-title">We Do Not<br>Chase <span class="accent">Trends.</span><br>We Build Systems.</h2>
+      <p>PUREVIVE is a multi-sector holding company headquartered in Indonesia with a <strong>global outlook</strong>. We invest in and support operating businesses across energy, technology, architecture, tourism, media, commerce, and international trade.</p>
+      <p>Our role is simple: identify businesses that already work — and help them work better at scale. We bring <strong>structure, discipline, and long-term thinking</strong> to every partnership.</p>
+    </div>
+    <div class="who-pillars reveal reveal-delay-2">
+      <div class="pillar">
+        <div class="pillar-icon">⚙️</div>
+        <div class="pillar-title">Strengthen Operations</div>
+        <div class="pillar-text">Optimize the engine. Remove friction. Build resilient operational foundations.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🏗️</div>
+        <div class="pillar-title">Improve Structure</div>
+        <div class="pillar-text">Governance frameworks, reporting systems, and clear accountability chains.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🛡️</div>
+        <div class="pillar-title">Protect Capital</div>
+        <div class="pillar-text">Disciplined allocation. Controlled scaling. Constant awareness of risk.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🌐</div>
+        <div class="pillar-title">Enable Intelligent Growth</div>
+        <div class="pillar-text">Cross-sector insight and shared resources that accelerate expansion.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section id="what">
+  <div class="what-inner">
+    <div class="section-label reveal">What We Do</div>
+    <h2 class="section-title reveal">For <span class="accent">Business</span> Owners</h2>
+    <div class="what-intro">
+      <div class="what-problem reveal">
+        <h3>Growth Brings Pressure.</h3>
+        <p>If you are a founder or operator, you already know that more revenue creates new challenges — not just opportunities.</p>
+        <ul class="pressure-list">
+          <li>Operational complexity at scale</li>
+          <li>Cash flow strain during expansion</li>
+          <li>Hiring and talent challenges</li>
+          <li>Strategic confusion and direction drift</li>
+        </ul>
+        <p style="margin-top:24px; font-size:16px; color: var(--cyan); font-weight:500;">PUREVIVE exists to reduce that pressure.</p>
+      </div>
+      <div class="what-solution reveal reveal-delay-2">
+        <h3>We Provide Clarity.</h3>
+        <div class="solution-cards">
+          <div class="solution-card">
+            <div class="solution-num">01</div>
+            <div>
+              <div class="solution-title">Strategic Oversight</div>
+              <div class="solution-text">Clear direction. Long-term planning. Measured expansion pathways.</div>
+            </div>
+          </div>
+          <div class="solution-card">
+            <div class="solution-num">02</div>
+            <div>
+              <div class="solution-title">Operational Structure</div>
+              <div class="solution-text">Processes, reporting systems, and governance frameworks that scale.</div>
+            </div>
+          </div>
+          <div class="solution-card">
+            <div class="solution-num">03</div>
+            <div>
+              <div class="solution-title">Capital Discipline</div>
+              <div class="solution-text">Smart allocation. Controlled scaling. Continuous risk awareness.</div>
+            </div>
+          </div>
+          <div class="solution-card">
+            <div class="solution-num">04</div>
+            <div>
+              <div class="solution-title">Portfolio Strength</div>
+              <div class="solution-text">Access to cross-sector insight and shared resources across the portfolio.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; padding: 40px; background: rgba(26,201,211,0.06); border: 1px solid rgba(26,201,211,0.15);" class="reveal">
+      <p style="font-family:'Bebas Neue',sans-serif; font-size:28px; letter-spacing:2px; color:var(--white);">WE DO NOT INTERFERE. <span style="color:var(--cyan)">WE ENHANCE.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT PHILOSOPHY -->
+<section id="philosophy">
+  <div class="philosophy-inner">
+    <div class="section-label reveal" style="justify-content:center">Investment Philosophy</div>
+    <h2 class="section-title reveal">What We<br><span class="accent">Believe</span></h2>
+    <div class="phi-divider reveal"></div>
+    <p class="big-quote reveal">Growth without structure creates <span class="accent">fragility.</span><br>Structure without vision creates <span class="accent">stagnation.</span><br>We bring both.</p>
+    <div class="phi-criteria">
+      <div class="crit-item reveal">
+        <div class="crit-num">01</div>
+        <div class="crit-title">Proven Revenue</div>
+        <div class="crit-text">We invest in businesses that already generate consistent, demonstrable revenue.</div>
+      </div>
+      <div class="crit-item reveal reveal-delay-1">
+        <div class="crit-num">02</div>
+        <div class="crit-title">Leadership Maturity</div>
+        <div class="crit-text">Founders and operators with depth, self-awareness, and the will to scale.</div>
+      </div>
+      <div class="crit-item reveal reveal-delay-2">
+        <div class="crit-num">03</div>
+        <div class="crit-title">Market Position</div>
+        <div class="crit-text">Clear differentiation and defensible positioning within their sector.</div>
+      </div>
+      <div class="crit-item reveal reveal-delay-3">
+        <div class="crit-num">04</div>
+        <div class="crit-title">Scalable Potential</div>
+        <div class="crit-text">A business model capable of intelligent, structured expansion at scale.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section id="sectors">
+  <div class="sectors-inner">
+    <div class="sectors-header reveal">
+      <div>
+        <div class="section-label">Our Sectors</div>
+        <h2 class="section-title">Strategic <span class="accent">Industries</span></h2>
+      </div>
+      <p class="sector-tagline">Diversification allows stability. Integration creates advantage.</p>
+    </div>
+    <div class="sectors-grid">
+      <div class="sector-item reveal">
+        <span class="sector-icon">⚡</span>
+        <div class="sector-name">Energy Solutions</div>
+        <div class="sector-desc">Battery technology, solar infrastructure, and oil & gas operations driving the future of energy.</div>
+      </div>
+      <div class="sector-item reveal reveal-delay-1">
+        <span class="sector-icon">💻</span>
+        <div class="sector-name">Information Technology</div>
+        <div class="sector-desc">Enterprise software, digital infrastructure, and technology services for the modern economy.</div>
+      </div>
+      <div class="sector-item reveal reveal-delay-2">
+        <span class="sector-icon">🏛️</span>
+        <div class="sector-name">Architecture & Design</div>
+        <div class="sector-desc">Structural design, urban development, and built environment expertise at scale.</div>
+      </div>
+      <div class="sector-item reveal">
+        <span class="sector-icon">✈️</span>
+        <div class="sector-name">Travel & Tourism</div>
+        <div class="sector-desc">Hospitality, travel operations, and destination experiences for global markets.</div>
+      </div>
+      <div class="sector-item reveal reveal-delay-1">
+        <span class="sector-icon">🎬</span>
+        <div class="sector-name">Film & Media Production</div>
+        <div class="sector-desc">Content creation, film production, and media distribution across regional markets.</div>
+      </div>
+      <div class="sector-item reveal reveal-delay-2">
+        <span class="sector-icon">🎪</span>
+        <div class="sector-name">Exhibitions & Conferences</div>
+        <div class="sector-desc">World-class event infrastructure, international exhibitions, and B2B conference platforms.</div>
+      </div>
+      <div class="sector-item reveal">
+        <span class="sector-icon">📱</span>
+        <div class="sector-name">Digital Marketing</div>
+        <div class="sector-desc">Performance marketing, brand building, and digital growth for portfolio companies.</div>
+      </div>
+      <div class="sector-item reveal reveal-delay-1">
+        <span class="sector-icon">🛒</span>
+        <div class="sector-name">E-Commerce</div>
+        <div class="sector-desc">Digital commerce operations, marketplace strategy, and omni-channel retail growth.</div>
+      </div>
+      <div class="sector-item reveal reveal-delay-2">
+        <span class="sector-icon">🚢</span>
+        <div class="sector-name">Import & Export</div>
+        <div class="sector-desc">International trade facilitation, supply chain optimization, and cross-border commerce.</div>
+      </div>
+    </div>
+    <p class="sectors-note reveal"><strong>Multi-sector presence</strong> — not as a hedge, but as a strategic engine for cross-portfolio insight.</p>
+  </div>
+</section>
+
+<!-- GOVERNANCE -->
+<section id="governance">
+  <div class="gov-grid">
+    <div class="gov-visual reveal">
+      <div class="gov-ring"></div>
+      <div class="gov-ring"></div>
+      <div class="gov-ring"></div>
+      <div class="gov-center">
+        <span class="gov-center-icon">🏦</span>
+        <div class="gov-center-label">Governance</div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <div class="section-label">Governance & Discipline</div>
+      <h2 class="section-title">Every Decision<br>Evaluated Against<br><span class="accent">Long-Term</span> Impact.</h2>
+      <p style="margin-top:24px; font-size:15px; color:var(--muted); line-height:1.8;">We operate under a structured governance model. If a decision does not strengthen the foundation, it is not pursued.</p>
+      <ul class="gov-pillars">
+        <li>
+          <div class="gov-num">01</div>
+          <div>
+            <div class="gov-item-title">Capital Protection</div>
+            <div class="gov-item-text">Rigorous evaluation of every capital deployment. Preservation comes before amplification.</div>
+          </div>
+        </li>
+        <li>
+          <div class="gov-num">02</div>
+          <div>
+            <div class="gov-item-title">Accountability Systems</div>
+            <div class="gov-item-text">Clear ownership, transparent reporting, and disciplined review cycles across the portfolio.</div>
+          </div>
+        </li>
+        <li>
+          <div class="gov-num">03</div>
+          <div>
+            <div class="gov-item-title">Strategic Alignment</div>
+            <div class="gov-item-text">Every portfolio company aligned to the PUREVIVE long-term vision and value framework.</div>
+          </div>
+        </li>
+        <li>
+          <div class="gov-num">04</div>
+          <div>
+            <div class="gov-item-title">Sustainable Scaling</div>
+            <div class="gov-item-text">Growth measured by durability, not speed. Scale that endures market cycles.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERSHIPS -->
+<section id="partnerships">
+  <div class="partner-inner">
+    <div class="section-label reveal" style="justify-content:center">Strategic Partnerships</div>
+    <h2 class="section-title reveal">Fewer <span class="accent">Partnerships.</span><br>Stronger Results.</h2>
+    <p style="margin-top:20px; color:var(--muted); font-size:15px; line-height:1.8;" class="reveal">We prioritize alignment over volume. Every partnership is built to last.</p>
+    <div class="partner-types">
+      <div class="ptype reveal">
+        <span class="ptype-icon">🏢</span>
+        <div class="ptype-label">Established Companies</div>
+        <div class="ptype-sub">Businesses with proven models ready to scale with structured support.</div>
+      </div>
+      <div class="ptype reveal reveal-delay-1">
+        <span class="ptype-icon">🏛</span>
+        <div class="ptype-label">Institutional Partners</div>
+        <div class="ptype-sub">Strategic institutions that share our long-term value creation philosophy.</div>
+      </div>
+      <div class="ptype reveal reveal-delay-2">
+        <span class="ptype-icon">📈</span>
+        <div class="ptype-label">Long-Term Investors</div>
+        <div class="ptype-sub">Capital partners aligned to patient, structured, durable growth.</div>
+      </div>
+      <div class="ptype reveal reveal-delay-3">
+        <span class="ptype-icon">🌏</span>
+        <div class="ptype-label">Regional Operators</div>
+        <div class="ptype-sub">Local market experts with the depth and relationships to win.</div>
+      </div>
+    </div>
+    <p class="partner-motto reveal">We Move <span>Nations.</span></p>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section id="cta-section">
+  <div class="cta-bg-text">PUREVIVE</div>
+  <div class="cta-inner">
+    <div class="section-label reveal" style="justify-content:center">Ready to Build</div>
+    <h2 class="cta-tagline reveal">Built to<br><span class="accent">Outlast</span><br>Individuals.</h2>
+    <p class="cta-sub reveal">PUREVIVE is built for continuity, scale, and long-term value. If you are building something serious, we are prepared to build with you.</p>
+    <div class="cta-buttons reveal">
+      <a href="mailto:contact@pureviveglobalhub.com" class="btn-primary">
+        Connect With Us
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#who" class="btn-secondary">
+        Learn More
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.84 43.05" style="height:22px;width:auto;">
+      <defs><style>.fcls-1,.fcls-2{fill:#1ac9d3;}.fcls-1,.fcls-3{fill-rule:evenodd;}.fcls-3,.fcls-4{fill:#ffffff;}</style></defs>
+      <g>
+        <path class="fcls-4" d="M55.02,43.05c-1.66,0-3.13-.23-4.41-.68-1.28-.45-2.36-1.08-3.25-1.89-.88-.81-1.55-1.79-2.01-2.95-.46-1.15-.69-2.42-.69-3.8v-12.31h7.51v12.02c0,.98.25,1.73.75,2.24.5.51,1.2.77,2.1.77s1.6-.25,2.1-.77c.5-.51.75-1.26.75-2.24v-12.02h7.51v12.32c0,1.38-.23,2.65-.69,3.8-.46,1.15-1.13,2.13-2.01,2.95-.88.81-1.97,1.44-3.26,1.89-1.29.45-2.76.68-4.4.68h0Z"/>
+        <path class="fcls-4" d="M68.84,21.42h11.71c1.34,0,2.55.2,3.63.58,1.08.39,2,.93,2.75,1.62s1.33,1.52,1.73,2.48c.4.96.6,2,.6,3.12s-.18,2.09-.55,2.85-.78,1.37-1.25,1.83c-.52.54-1.12.98-1.8,1.32h0s3.9,7.21,3.9,7.21h-7.51l-3-5.71h-2.7v5.71h-7.51v-21.02h0ZM79.65,31.03c.6,0,1.08-.17,1.43-.51.35-.34.53-.77.53-1.29s-.18-.95-.53-1.29-.83-.51-1.43-.51h-3.3v3.6h3.3Z"/>
+        <path class="fcls-4" d="M92.27,21.42h17.27v6.01h-9.76v1.95h7.66v5.11h-7.66v1.95h9.76v6.01h-17.27v-21.03Z"/>
+        <path class="fcls-4" d="M135.07,21.42h7.51v21.03h-7.51v-21.03Z"/>
+        <path class="fcls-4" d="M168.56,21.42h17.27v6.01h-9.76v1.95h7.66v5.11h-7.66v1.95h9.76v6.01h-17.27v-21.03h0Z"/>
+        <polygon class="fcls-3" points="111.15 21.72 118.66 21.72 128.58 42.75 116.56 42.75 111.15 21.72"/>
+        <polygon class="fcls-1" points="133.83 21.72 126.47 21.72 122.3 42.75 128.58 42.75 133.83 21.72"/>
+        <polyline class="fcls-3" points="144.47 21.72 151.98 21.72 161.89 42.75 149.88 42.75 144.47 21.72"/>
+        <polygon class="fcls-1" points="167.15 21.72 159.79 21.72 155.61 42.75 161.89 42.75 167.15 21.72"/>
+        <path class="fcls-1" d="M29.16,0v4.88H6.91c-1.15.27-1.75.93-2.03,1.68v22.6H0V9.58L9.59,0h19.57Z"/>
+        <path class="fcls-1" d="M27.59,12.03v2.86h-13.07c-.68.16-1.03.55-1.19.98v13.28h-2.86v-11.5l5.64-5.63h11.5Z"/>
+        <path class="fcls-4" d="M41.62,26.3c-.42-.99-1.02-1.85-1.8-2.57s-1.73-1.29-2.84-1.7c-.29-.11-.59-.2-.89-.28v2.53h-13.07c-.67.16-1.01.54-1.18.97v17.2h7.51v-4.81h3.9c1.38,0,2.63-.21,3.74-.62,1.11-.41,2.06-.98,2.84-1.7.78-.72,1.38-1.58,1.8-2.57.42-.99.63-2.07.63-3.23s-.21-2.24-.63-3.23ZM33.98,31.03c-.41.4-.96.6-1.64.6h-3v-4.21h3c.68,0,1.23.2,1.64.6.41.4.62.9.62,1.5s-.21,1.1-.62,1.5Z"/>
+        <path class="fcls-2" d="M18.96,27.05v11.5h2.86v-13.28s0-.01,0-.02v-1.07l-2.87,2.87Z"/>
+        <path class="fcls-2" d="M23.01,24.28h13.07v-2.53c-.87-.23-1.82-.34-2.84-.34h-8.65l-2.76,2.76v1.07c.17-.43.52-.81,1.18-.97Z"/>
+      </g>
+    </svg>
+    <div>
+      <div class="footer-tagline">We Move Nations</div>
+    </div>
+  </div>
+  <div class="footer-copy" id="footerCopy">© 2025 PUREVIVE Holding · Indonesia · All Rights Reserved</div>
+</footer>
+
+<script>
+  // Footer year
+  document.getElementById('footerCopy').textContent =
+    `© ${new Date().getFullYear()} PUREVIVE Holding · Indonesia · All Rights Reserved`;
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  const navOverlay = document.getElementById('navOverlay');
+
+  function closeNav() {
+    navToggle.classList.remove('open');
+    navLinks.classList.remove('open');
+    navOverlay.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+  function toggleNav() {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navOverlay.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  }
+  navToggle.addEventListener('click', toggleNav);
+  navOverlay.addEventListener('click', closeNav);
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px';
+    cursor.style.top = my + 'px';
+  });
+
+  function animRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animRing);
+  }
+  animRing();
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => obs.observe(r));
+
+  // Counter animation
+  function animCounter(el) {
+    const target = +el.dataset.count;
+    const plus = el.dataset.plus !== undefined;
+    let start = 0;
+    const step = target / 60;
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) { start = target; clearInterval(timer); }
+      el.textContent = Math.floor(start) + (plus ? '+' : '');
+    }, 16);
+  }
+
+  const statObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && e.target.dataset.count) {
+        animCounter(e.target);
+        statObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach(el => statObs.observe(el));
+
+  // Canvas 3D hero with floating geometric shapes
+  const canvas = document.getElementById('canvas-3d');
+  const ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Particles / geometric forms
+  const particles = [];
+  const NUM = 60;
+
+  function randomBetween(a, b) { return a + Math.random() * (b - a); }
+
+  class Particle {
+    constructor() { this.reset(); }
+    reset() {
+      this.x = randomBetween(0, window.innerWidth);
+      this.y = randomBetween(0, window.innerHeight);
+      this.z = randomBetween(0.3, 1);
+      this.size = randomBetween(1, 3) * this.z;
+      this.vx = randomBetween(-0.3, 0.3) * this.z;
+      this.vy = randomBetween(-0.3, 0.3) * this.z;
+      this.type = Math.floor(randomBetween(0, 3));
+      this.angle = randomBetween(0, Math.PI * 2);
+      this.rotSpeed = randomBetween(-0.01, 0.01);
+      this.alpha = randomBetween(0.08, 0.35) * this.z;
+    }
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      this.angle += this.rotSpeed;
+      if (this.x < -50 || this.x > window.innerWidth + 50 || this.y < -50 || this.y > window.innerHeight + 50) this.reset();
+    }
+    draw(ctx) {
+      ctx.save();
+      ctx.translate(this.x, this.y);
+      ctx.rotate(this.angle);
+      ctx.strokeStyle = `rgba(26,201,211,${this.alpha})`;
+      ctx.lineWidth = 0.8;
+      ctx.beginPath();
+      const s = this.size * 12;
+      if (this.type === 0) {
+        // Square
+        ctx.rect(-s/2, -s/2, s, s);
+      } else if (this.type === 1) {
+        // Triangle
+        ctx.moveTo(0, -s);
+        ctx.lineTo(s * 0.866, s * 0.5);
+        ctx.lineTo(-s * 0.866, s * 0.5);
+        ctx.closePath();
+      } else {
+        // Cross / plus
+        ctx.moveTo(0, -s); ctx.lineTo(0, s);
+        ctx.moveTo(-s, 0); ctx.lineTo(s, 0);
+      }
+      ctx.stroke();
+      ctx.restore();
+    }
+  }
+
+  // Connection lines
+  class Node {
+    constructor() {
+      this.x = randomBetween(0, window.innerWidth);
+      this.y = randomBetween(0, window.innerHeight);
+      this.vx = randomBetween(-0.15, 0.15);
+      this.vy = randomBetween(-0.15, 0.15);
+    }
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      if (this.x < 0 || this.x > window.innerWidth) this.vx *= -1;
+      if (this.y < 0 || this.y > window.innerHeight) this.vy *= -1;
+    }
+  }
+
+  const nodes = Array.from({length: 30}, () => new Node());
+  for (let i = 0; i < NUM; i++) particles.push(new Particle());
+
+  let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+  window.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw connections
+    for (let i = 0; i < nodes.length; i++) {
+      nodes[i].update();
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 180) {
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(26,201,211,${(1 - dist/180) * 0.06})`;
+          ctx.lineWidth = 0.5;
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.stroke();
+        }
+      }
+      // Node dot
+      ctx.beginPath();
+      ctx.arc(nodes[i].x, nodes[i].y, 1.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(26,201,211,0.12)';
+      ctx.fill();
+    }
+
+    // Mouse connection to nearby nodes
+    for (const n of nodes) {
+      const dx = n.x - mouseX;
+      const dy = n.y - mouseY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 200) {
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(26,201,211,${(1 - dist/200) * 0.18})`;
+        ctx.lineWidth = 0.8;
+        ctx.moveTo(n.x, n.y);
+        ctx.lineTo(mouseX, mouseY);
+        ctx.stroke();
+      }
+    }
+
+    // Particles
+    particles.forEach(p => { p.update(); p.draw(ctx); });
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+
+  // Parallax on hero
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+      heroContent.style.transform = `translateY(${scrollY * 0.35}px)`;
+      heroContent.style.opacity = 1 - scrollY / 600;
+    }
+  });
+</script>
+</body>
+</html>
